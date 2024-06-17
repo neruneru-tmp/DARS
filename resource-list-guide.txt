@@ -1,0 +1,32 @@
+<書き方例>
+カラム1: AWSサービスタイプ
+カラム2: リソース識別子
+カラム3: リソース識別子
+カラム4: 出力タイプ
+
+
+
+<補足>
+・各カラム間のスペースはいくつでも構いません
+・複数のオプションを必要とするリソース識別子はコンマ繋ぎで記述してください(記述順にも注意)
+・その他不明点はdars.shを参照下さい
+
+# diff出力
+cloudfront.cache-policy           9aa9783d-eed5-476a-91ec-77aa16d3fddd  4aa6144d-e180-4ec3-b620-e2e3f7941bbd  diff
+
+# conf出力
+cloudfront.origin-request-policy  1c80e1ee-69fd-41f5-b618-bf6cc2dc1822  dabb1960-9caa-4b8f-9952-3ccfe1ddc1b6  conf
+
+# html出力
+cloudfront.distribution           E341JH8QWAAV30                        E1T000CGO0D48L                        html
+
+# 複数のオプションを必要とするリソース識別子
+waf.ip-set ip-set1,REGIONAL,ip-set1-id ip-set2,REGIONAL,ip-set2-id diff
+
+
+
+<実際の記述例>
+cloudfront.cache-policy           9ff97aad-eed5-476a-91ec-77aa16d3fddd  4696133d-e180-4ec3-b620-e2e3f7941bbd  diff
+cloudfront.origin-request-policy  1c80e1aa-69fd-41f5-b618-bf6a42dc1822  da7e0060-9caa-4b8f-9952-3ccfe1ddc1b6  conf
+                                  # comment1                            # comment2
+cloudfront.distribution           E341JH8AANCV30                        E1T955CGO0D48L                        html
